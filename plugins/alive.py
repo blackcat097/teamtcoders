@@ -161,7 +161,7 @@ async def commands_set(_, query: CallbackQuery):
 » /uptime - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴜᴘᴛɪᴍᴇ sᴛᴀᴛᴜs
 » /alive - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴀʟɪᴠᴇ ɪɴғᴏ (ɪɴ ɢʀᴏᴜᴘ ᴏɴʟʏ)
 » /help - ᴛᴏ sʜᴏᴡ ʜᴇʟᴘ ᴍᴇssᴀɢᴇ (ғᴜʟʟ ʙᴏᴛ ɢᴜɪᴅᴇ)
-⚡️ __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} ᴀɪ__""",. 
+⚡️ __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} ᴀɪ__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
