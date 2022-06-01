@@ -166,7 +166,7 @@ async def commands_set(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "ʀᴇᴛᴜʀɴ ᴛᴏ ʜᴏᴍᴇ", callback_data="home_start")
+                        "◁", callback_data="home_start")
                 ]
             ]
         ),
@@ -184,13 +184,6 @@ async def info(_, query: CallbackQuery):
 💝 ᴛʜɪs ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/tgshadow_fighters) \n 
 ❣️ © ᴏɴ ʙᴇʜᴀʟғ ᴏғ [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/tgshadow_fighters)
         reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "ʀᴇᴛᴜʀɴ ᴛᴏ ʜᴏᴍᴇ", callback_data="home_start")
-                ]
-            ]
+            [[InlineKeyboardButton("◁", callback_data="help_command")]]
         ),
     )
- ) 
-
