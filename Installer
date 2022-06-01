@@ -2,6 +2,7 @@ aiohttp
 aiofiles
 asyncio
 dnspython
+python-dotenv
 ffmpeg-python
 future
 git+https://github.com/kaalmous/downloader@kaal
