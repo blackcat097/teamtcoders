@@ -163,6 +163,6 @@ async def info(_, query: CallbackQuery):
 ❣️ © ᴏɴ ʙᴇʜᴀʟғ ᴏғ [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/tgshadow_fighters)
 """, 
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("◁", callback_data="help_command")]]
+            [[InlineKeyboardButton("◁", callback_data="home_start")]]
         ),
     ) 
