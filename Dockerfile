@@ -7,5 +7,5 @@ RUN apt-get install -y nodejs
 RUN npm i -g npm
 COPY . /aditya/
 WORKDIR /aditya/
-RUN pip3 install -U -r Installer
+RUN pip3 install -U -r requirement requirements.txt
 CMD python3 -m modules
