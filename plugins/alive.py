@@ -102,6 +102,7 @@ async def get_uptime(c: Client, message: Message):
                 f"• **ᴘᴏᴡᴇʀᴇᴅ ʙʏ:** `{GROUP_SUPPORT}`"
               ) 
 
+
 @Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
 async def ping_pong(c: Client, message: Message):
     start = time()
