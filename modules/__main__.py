@@ -12,12 +12,6 @@ bot = Bot(
     bot_token=BOT_TOKEN,
     plugins=dict(root="plugins")
 )
-
-
-
-with Client(":teamshadow:", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
-    me_bot = app.get_me()
-
 bot.start()
 run()
 idle()
