@@ -187,4 +187,4 @@ async def info(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("◁", callback_data="help_command")]]
         ),
-    )
+    ) 
