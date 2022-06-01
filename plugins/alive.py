@@ -50,7 +50,7 @@ async def start_(client: Client, message: Message):
             InlineKeyboardButton("• ᴄʜᴀɴɴᴇʟ", url="https://t.me/teamshadowprojects"), 
             ],[
             InlineKeyboardButton("• ɪɴғᴏʀᴍᴀᴛɪᴏɴ", callback_data="info"), 
-            InlineKeyboardButton("• ᴅᴏɴᴀᴛᴇ", user_id=5287160769), 
+            InlineKeyboardButton("• ᴅᴏɴᴀᴛᴇ", user_id="5287160769"), 
             ],[
             InlineKeyboardButton("✚ ᴘʟᴇᴀsᴇ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
@@ -120,10 +120,10 @@ async def get_uptime(c: Client, message: Message):
     await message.reply_photo(
         photo=random.choice(START_IMG_URL), 
         caption="😊 ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ʙᴏᴛ sᴛᴀᴛᴜs:\n"
-                f"• **ᴜᴘᴛɪᴍᴇ:** `{uptime}`\n"
-                f"• **ᴜsᴇʀ:** `{message.from_user.mention()}`\n"
-                f"• **sᴛᴀʀᴛ ᴛɪᴍᴇ:** `{START_TIME_ISO}`\n"
-                f"• **ᴘᴏᴡᴇʀᴇᴅ ʙʏ:** `{GROUP_SUPPORT}`"
+                f"• **ᴜᴘᴛɪᴍᴇ:** **{uptime}**\n"
+                f"• **ᴜsᴇʀ:** **{message.from_user.mention()}**\n"
+                f"• **sᴛᴀʀᴛ ᴛɪᴍᴇ:** **{START_TIME_ISO}**\n"
+                f"• **ᴘᴏᴡᴇʀᴇᴅ ʙʏ:** **@{GROUP_SUPPORT}**"
               ) 
 
 
@@ -149,7 +149,7 @@ async def start_set(_, query: CallbackQuery):
             InlineKeyboardButton("• ᴄʜᴀɴɴᴇʟ", url="https://t.me/teamshadowprojects"), 
             ],[
             InlineKeyboardButton("• ɪɴғᴏʀᴍᴀᴛɪᴏɴ", callback_data="info"), 
-            InlineKeyboardButton("• ᴅᴏɴᴀᴛᴇ", user_id=5287160769), 
+            InlineKeyboardButton("• ᴅᴏɴᴀᴛᴇ", user_id="5287160769"), 
             ],[
             InlineKeyboardButton("✚ ᴘʟᴇᴀsᴇ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
