@@ -138,7 +138,6 @@ async def ping_pong(c: Client, message: Message):
 
 @Client.on_callback_query(filters.regex("home_start"))
 async def start_set(_, query: CallbackQuery):
-    BOT_NAME = me_bot.first_name
     await query.answer("home start")
     await query.edit_message_text(
         f"""👋🏻 **ʜᴇʟʟᴏ {message.from_user.mention()} ɪᴀᴍ ᴀ ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴍᴜsɪᴄ ʙᴏᴛ ɪᴀᴍ ᴘʟᴀʏ ᴍᴜsɪᴄ ɪɴ ᴛᴇʟᴇɢʀᴀᴍ! **
@@ -150,7 +149,6 @@ async def start_set(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("command_list"))
 async def commands_set(_, query: CallbackQuery):
-    BOT_NAME = me_bot.first_name
     await query.answer("command listlist") 
     await query.edit_message_text(
         f"""💗 ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ ғᴏʀ ᴀʟʟ ᴜsᴇʀ.
@@ -175,7 +173,6 @@ async def commands_set(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("info"))
 async def info(_, query: CallbackQuery):
-    BOT_NAME = me_bot.first_name
     await query.answer("information")
     await query.edit_message_text(
         f"""✨ ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
