@@ -15,10 +15,8 @@ bot = Bot(
 
 
 
-with Client(":santhu:", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
+with Client(":teamshadow:", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
     me_bot = app.get_me()
-with santhu as app:
-    me_santhu = app.get_me()
 
 bot.start()
 run()
