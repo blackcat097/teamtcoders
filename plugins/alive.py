@@ -146,7 +146,7 @@ async def start_set(_, query: CallbackQuery):
 
 **ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/tgshadow_fighters) !**
 """, 
-
+       ) 
 
 @Client.on_callback_query(filters.regex("command_list"))
 async def commands_set(_, query: CallbackQuery):
@@ -171,6 +171,7 @@ async def commands_set(_, query: CallbackQuery):
             ]
         ),
     )
+
 
 @Client.on_callback_query(filters.regex("info"))
 async def info(_, query: CallbackQuery):
