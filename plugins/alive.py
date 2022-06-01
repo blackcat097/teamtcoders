@@ -50,7 +50,7 @@ async def start_(client: Client, message: Message):
             InlineKeyboardButton("• ᴄʜᴀɴɴᴇʟ", url="https://t.me/teamshadowprojects"), 
             ],[
             InlineKeyboardButton("• ɪɴғᴏʀᴍᴀᴛɪᴏɴ", callback_data="info"), 
-            InlineKeyboardButton("• ᴅᴏɴᴀᴛᴇ", user_id="5287160769"), 
+            InlineKeyboardButton("• ᴅᴏɴᴀᴛᴇ", url="https://telegram.me/TgShadow_fighter"), 
             ],[
             InlineKeyboardButton("✚ ᴘʟᴇᴀsᴇ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
@@ -149,7 +149,7 @@ async def start_set(_, query: CallbackQuery):
             InlineKeyboardButton("• ᴄʜᴀɴɴᴇʟ", url="https://t.me/teamshadowprojects"), 
             ],[
             InlineKeyboardButton("• ɪɴғᴏʀᴍᴀᴛɪᴏɴ", callback_data="info"), 
-            InlineKeyboardButton("• ᴅᴏɴᴀᴛᴇ", user_id="5287160769"), 
+            InlineKeyboardButton("• ᴅᴏɴᴀᴛᴇ", url="https://telegram.me/TgShadow_fighter"), 
             ],[
             InlineKeyboardButton("✚ ᴘʟᴇᴀsᴇ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
