@@ -1,7 +1,7 @@
 ### Best Smart Voice Chat Music Robot For Telegram Groups ...
 
 
-<p align="center"><a href="https://t.me/adityahalder"><img src="https://te.legra.ph/file/c6e1041c6c9a12913f57a.png"></a></p>
+<p align="center"><a href="https://t.me/tgshadow_fighters"><img src="https://te.legra.ph/file/02daf1a0d434a29f9d54c.jpg"></a></p>
 
 
 
