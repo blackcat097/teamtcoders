@@ -13,7 +13,6 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from image import START_IMG_URL, BOT_USERNAME, GROUP_SUPPORT, BOT_NAME
 import random
 from pyrogram.errors import UserNotParticipant
-from plugins.import __version__
 
 from modules.__main__ import bot
 START_TIME = datetime.utcnow()
@@ -160,7 +159,6 @@ async def info(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""✨ ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
 💘 ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ɪs ᴀ ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ɪɴ ʜᴇʀᴏᴋᴜ, ɪᴛ's ᴏɴʟɪɴᴇ sɪɴᴄᴇ 𝟷sᴛ ᴊᴜɴᴇ 𝟸𝟶𝟸𝟸 ᴀɴᴅ ɪᴛ's ᴄᴏɴsᴛᴀɴᴛʟʏ ᴜᴘᴅᴀᴛᴇᴅ \n
-💗 ʙᴏᴛ ᴠᴇʀsɪᴏɴ: v{version} \n
 💝 ᴛʜɪs ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/tgshadow_fighters) \n 
 ❣️ © ᴏɴ ʙᴇʜᴀʟғ ᴏғ [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/tgshadow_fighters)
 """, 
