@@ -10,10 +10,10 @@ from modules.helpers.filters import command
 from modules.helpers.command import commandpro
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-from image import START_IMG_URL, BOT_USERNAME, GROUP_SUPPORT
+from image import START_IMG_URL, BOT_USERNAME, GROUP_SUPPORT, BOT_NAME
 import random
 from pyrogram.errors import UserNotParticipant
-from teamshadow import __version__
+from plugins import __version__
 
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
