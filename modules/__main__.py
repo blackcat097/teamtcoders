@@ -14,12 +14,6 @@ bot = Bot(
 )
 
 
-santhu = Client(
-    api_id=API_ID,
-    api_hash=API_HASH,
-    string_session=STRING_SESSION,
-)
-
 
 with Client(":santhu:", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
     me_bot = app.get_me()
