@@ -1,5 +1,15 @@
-## BOT_IMAGE
+import os
+from os import getenv
+from dotenv import load_dotenv
 
+
+
+GROUP_SUPPORT = getenv("GROUP_SUPPORT", "tgshadow_fighters")
+UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "teamshadowprojects")
+
+
+
+## BOT_IMAGE
 START_IMG_URL = [
  "https://te.legra.ph/file/bd8bc8134550113f1bc7d.jpg", 
  "https://te.legra.ph/file/e709c376815fcdb9e7689.jpg", 
