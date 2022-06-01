@@ -151,7 +151,7 @@ async def start_set(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("command_list"))
 async def commands_set(_, query: CallbackQuery):
     BOT_NAME = me_bot.first_name
-    await query.answer("command list")
+    await query.answer("command listlist") 
     await query.edit_message_text(
         f"""💗 ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ ғᴏʀ ᴀʟʟ ᴜsᴇʀ.
 » /play (sᴏɴɢ ɴᴀᴍᴇ/ʟɪɴᴋ) - ᴘʟᴀʏ ᴍᴜsɪᴄ ᴏɴ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ
