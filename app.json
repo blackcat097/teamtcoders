@@ -1,6 +1,6 @@
 {
-    "name": "AdityaPlayer",
-    "logo": "https://te.legra.ph/file/2e2ddeb33674ba956148f.jpg",
+    "name": "Team Shadow Music",
+    "logo": "https://te.legra.ph/file/02daf1a0d434a29f9d54c.jpg",
     "description": "An Advanced Premium Music Bot For Telegram Groups VC.",
     "keywords": ["music", "voice chat", "telegram"],
     "repository": "https://github.com/itsadityaxd/adityaplayer",
@@ -18,8 +18,16 @@
             "description": "Put Bot Token Of Your Bot",
             "required": true
         },
+        "BOT_USERNAME": {
+            "description": "put your bot name here",
+            "required": true
+        },
         "STRING_SESSION": {
             "description": "Pyrogram String Session",
+            "required": true
+        },
+        "GROUP_SUPPORT": {
+            "description": "put your group support",
             "required": true
         }
     },
