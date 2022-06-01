@@ -192,4 +192,5 @@ async def info(_, query: CallbackQuery):
             ]
         ),
     )
+ ) 
 
