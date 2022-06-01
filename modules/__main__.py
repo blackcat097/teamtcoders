@@ -12,6 +12,7 @@ bot = Bot(
     bot_token=BOT_TOKEN,
     plugins=dict(root="plugins")
 )
+
 bot.start()
 run()
 idle()
