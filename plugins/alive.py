@@ -161,7 +161,16 @@ async def commands_set(_, query: CallbackQuery):
 » /uptime - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴜᴘᴛɪᴍᴇ sᴛᴀᴛᴜs
 » /alive - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴀʟɪᴠᴇ ɪɴғᴏ (ɪɴ ɢʀᴏᴜᴘ ᴏɴʟʏ)
 » /help - ᴛᴏ sʜᴏᴡ ʜᴇʟᴘ ᴍᴇssᴀɢᴇ (ғᴜʟʟ ʙᴏᴛ ɢᴜɪᴅᴇ)
-⚡️ __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} ᴀɪ__""",
+⚡️ __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} ᴀɪ__""",. 
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "ʀᴇᴛᴜʀɴ ᴛᴏ ʜᴏᴍᴇ", callback_data="home_start")
+                ]
+            ]
+        ),
+    )
 
 @Client.on_callback_query(filters.regex("info"))
 async def info(_, query: CallbackQuery):
@@ -173,3 +182,12 @@ async def info(_, query: CallbackQuery):
 💗 ʙᴏᴛ ᴠᴇʀsɪᴏɴ: v{version} \n
 💝 ᴛʜɪs ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/tgshadow_fighters) \n 
 ❣️ © ᴏɴ ʙᴇʜᴀʟғ ᴏғ [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/tgshadow_fighters)
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "ʀᴇᴛᴜʀɴ ᴛᴏ ʜᴏᴍᴇ", callback_data="home_start")
+                ]
+            ]
+        ),
+    )
