@@ -14,7 +14,7 @@ from image import START_IMG_URL, BOT_USERNAME, GROUP_SUPPORT, BOT_NAME
 import random
 from pyrogram.errors import UserNotParticipant
 from plugins import __version__
-
+from modules.__main__.bot
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
 TIME_DURATION_UNITS = (
