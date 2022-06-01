@@ -54,7 +54,7 @@ async def start_(client: Client, message: Message):
     
     
 @Client.on_message(commandpro(["/alive", "shadow"]) & filters.group & ~filters.edited)
-async def start(client: Client, message: Message):
+async def alive(client: Client, message: Message):
     await message.reply_photo(
         photo=random.choice(START_IMG_URL),
         caption=f"""ʜᴇʟʟᴏ.. {message.from_user.mention()} ɪᴀᴍ ᴀʟɪᴠᴇ ɴᴏᴡ ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ..""",
@@ -69,17 +69,43 @@ async def start(client: Client, message: Message):
     )
 
 
-@Client.on_message(commandpro(["repo", "#repo", "@repo", "/repo", "source"]) & filters.group & ~filters.edited)
+@Client.on_message(command("help") & filters.private & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://te.legra.ph/file/c6e1041c6c9a12913f57a.png",
-        caption=f"""""",
+        caption=f""" ✨ **ʜᴇʟʟᴏ {message.from_user.mention()} !**\n
+💘 **ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ sᴇᴛᴜᴘ ᴛʜɪs ʙᴏᴛ? ʀᴇᴀᴅ 💖 sᴇᴛᴛɪɴɢ ᴜᴘ ᴛʜɪs ʙᴏᴛ ɪɴ ɢʀᴏᴜᴘ **\n
+💗 **ᴛᴏ ᴋɴᴏᴡ ᴘʟᴀʏ /ᴀᴜᴅɪᴏ? ʀᴇᴀᴅ 💖 ǫᴜɪᴄᴋ ᴜsᴇ ᴄᴏᴍᴍᴀɴᴅs **\n
+💝 **ᴛᴏ ᴋɴᴏᴡ ᴇᴠᴇʀʏ sɪɴɢʟᴇ ᴄᴏᴍᴍᴀɴᴅ ᴏғ ʙᴏᴛ? ʀᴇᴀᴅ 💖 ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs**\n """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "💥 ᴄʟɪᴄᴋ ᴍᴇ ᴛᴏ ɢᴇᴛ ʀᴇᴘᴏ 💞", url=f"https://github.com/mradityaxd/adityaplayer")
+                        "ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ", callback_data="")
                 ]
             ]
         ),
     )
+
+
+@Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
+async def get_uptime(c: Client, message: Message):
+    current_time = datetime.utcnow()
+    uptime_sec = (current_time - START_TIME).total_seconds()
+    uptime = await _human_time_duration(int(uptime_sec))
+    await message.reply_photo(
+        photo=random.choice(START_IMG_URL), 
+        caption="😊 ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ʙᴏᴛ sᴛᴀᴛᴜs:\n"
+                f"• **ᴜᴘᴛɪᴍᴇ:** `{uptime}`\n"
+                f"• **ᴜsᴇʀ:** `{message.from_user.mention()}`\n"
+                f"• **sᴛᴀʀᴛ ᴛɪᴍᴇ:** `{START_TIME_ISO}`\n"
+                f"• **ᴘᴏᴡᴇʀᴇᴅ ʙʏ:** `{GROUP_SUPPORT}`"
+              ) 
+
+@Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
+async def ping_pong(c: Client, message: Message):
+    start = time()
+    m_reply = await message.reply_text("ᴘɪɴɢɪɴɢ...")
+    delta_ping = time() - start
+    await m_reply.edit_text("💝 `ᴘᴏɴɢ!!`\n" f"💖 `{delta_ping * 1000:.3f} ms`")
+
