@@ -19,11 +19,8 @@
 
 ### Get String Session
 
-[![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@AdityaHalder/StringSession)
+[![ɢᴇɴᴇʀᴀᴛᴇsᴛʀɪɴɢ](https://img.shields.io/badge/repl.it-generateString-greenpink)](https://replit.com/@githubsanthu/TeamShadow-1)
 
 
-
-#### Copy Pasters You Can Copy This But Must Give Credits ...
-
-### Owner Of This Repository
-[![Aditya Halder](https://te.legra.ph/file/8f9d2a593854d0c736201.png)](https://t.me/AdityaHalder)
+### ᴄʀᴇᴅɪᴛs❣️
+[ᴛᴇᴀᴍsʜᴀᴅᴏᴡ](https://t.me/tgshadow_fighters)
