@@ -2,7 +2,7 @@ import os
 from os import getenv
 from dotenv import load_dotenv
 
-
+BOT_NAME = getenv("BOT_NAME", "ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴍᴜsɪᴄ")
 BOT_USERNAME = getenv("BOT_USERNAME") 
 GROUP_SUPPORT = getenv("GROUP_SUPPORT", "tgshadow_fighters")
 UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "teamshadowprojects")
