@@ -39,7 +39,7 @@ async def _human_time_duration(seconds):
 force_channel = "teamshadowprojects"
 
 @Client.on_message(command("start") & filters.private & ~filters.edited)
-async def start_(client: Client, message: Message, bot: Bot):   
+async def start_(client: Client, message: Message):   
     if force_channel:
         try:
             user = await bot.get_chat_member(force_channel, message.from_user.id) 
