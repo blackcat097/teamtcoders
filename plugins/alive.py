@@ -14,7 +14,7 @@ from image import START_IMG_URL, BOT_USERNAME, GROUP_SUPPORT, BOT_NAME
 import random
 from pyrogram.errors import UserNotParticipant
 from plugins import __version__
-from modules.__main__ import bot, me_bot
+from modules.__main__ import bot
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
 TIME_DURATION_UNITS = (
@@ -39,7 +39,7 @@ async def _human_time_duration(seconds):
 force_channel = "teamshadowprojects"
 
 @Client.on_message(command("start") & filters.private & ~filters.edited)
-async def start_(client: Client, message: Message):   
+async def start_(client: Client, message: Message, bot: Bot):   
     if force_channel:
         try:
             user = await bot.get_chat_member(force_channel, message.from_user.id) 
