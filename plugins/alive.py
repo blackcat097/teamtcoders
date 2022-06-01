@@ -9,7 +9,7 @@ from datetime import datetime
 from modules.helpers.filters import command
 from modules.helpers.command import commandpro
 from pyrogram import Client, filters
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, ChatJoinRequest
 from image import START_IMG_URL, BOT_USERNAME, GROUP_SUPPORT, BOT_NAME
 import random
 from pyrogram.errors import UserNotParticipant
