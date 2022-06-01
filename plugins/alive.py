@@ -183,6 +183,7 @@ async def info(_, query: CallbackQuery):
 💗 ʙᴏᴛ ᴠᴇʀsɪᴏɴ: v{version} \n
 💝 ᴛʜɪs ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/tgshadow_fighters) \n 
 ❣️ © ᴏɴ ʙᴇʜᴀʟғ ᴏғ [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/tgshadow_fighters)
+""", 
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("◁", callback_data="help_command")]]
         ),
