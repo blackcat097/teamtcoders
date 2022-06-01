@@ -1,4 +1,8 @@
-# Aditya Halder // @AdityaHalder
+## ©copyright infringement on Team Shadow Projects
+## support: https://t.me/tgshadow_fighters
+## network: https://t.me/teamshadowprojects
+
+
 
 import os
 import aiofiles
@@ -89,7 +93,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
     draw.text(
         (190, 670),
-        f"Powered By: Aditya Halder (@AdityaHalder)",
+        f"Powered By: ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ (@tgshadow_fighters)",
         (255, 255, 255),
         font=font,
     )
@@ -109,7 +113,7 @@ async def play(_, message: Message):
     global que
     global useer
     
-    lel = await message.reply("**🔎 Sɘɑɤƈɦɩɳʛ ...**")
+    lel = await message.reply("**😒 sɘɑɤƈɦɩɳʛ ʏᴏᴜʀ sᴏɴɢ ʀᴀ ɴɪʙʙᴀ...**")
 
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
