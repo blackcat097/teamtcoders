@@ -13,7 +13,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from image import START_IMG_URL, BOT_USERNAME, GROUP_SUPPORT, BOT_NAME
 import random
 from pyrogram.errors import UserNotParticipant
-from plugins import __version__
+from plugins.import __version__
 
 from modules.__main__ import bot
 START_TIME = datetime.utcnow()
