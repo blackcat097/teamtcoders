@@ -60,7 +60,7 @@ async def start_(client: Client, message: Message):
         ) 
     
     
-@Client.on_message(commandpro(["/alive", "shadow"]) & filters.group & ~filters.edited)
+@Client.on_message(commandpro(["/alive",]) & filters.group & ~filters.edited)
 async def alive(client: Client, message: Message):
     await message.reply_photo(
         photo=random.choice(START_IMG_URL),
