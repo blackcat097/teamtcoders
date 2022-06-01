@@ -1,7 +1,7 @@
 from pyrogram import idle
 from pyrogram import Client as Bot
 from modules.clientbot import run
-from modules.config import API_ID, API_HASH, BOT_TOKEN, 
+from modules.config import API_ID, API_HASH, BOT_TOKEN, STRING_SESSION
 from pyrogram import Client
 from pytgcalls import PyTgCalls
     
@@ -17,15 +17,10 @@ bot = Bot(
 santhu = Client(
     api_id=API_ID,
     api_hash=API_HASH,
-    session_name=SESSION_NAME,
-    
+    string_session=STRING_SESSION,
+  
     )
 
-user = PyTgCalls(santhu,
-    cache_duration=100,
-    overload_quiet_mode=True,)
-
-call_py = PyTgCalls(santhu, overload_quiet_mode=True)
 
 with Client(":santhu:", API_ID, API_HASH, bot_token=BOT_TOKEN) as app:
     me_bot = app.get_me()
