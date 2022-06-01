@@ -7,6 +7,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from image import START_IMG_URL, BOT_USERNAME
 import random
+from pyrogram.errors import UserNotParticipant
 
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
@@ -29,10 +30,26 @@ async def _human_time_duration(seconds):
                          .format(amount, unit, "" if amount == 1 else "s"))
     return ', '.join(parts)
     
-   
+force_channel = "teamshadowprojects"
 
 @Client.on_message(command("start") & filters.private & ~filters.edited)
-async def start_(client: Client, message: Message):
+async def start_(client: Client, message: Message):   
+    if force_channel:
+        try:
+            user = await bot.get_chat_member(force_channel, message.from_user.id) 
+            if user.status == "kicked out":
+                await message.reply_text("You are banned") 
+                return
+        except UserNotParticipant:
+            await message.reply_photo(
+                photo=random.choice(START_IMG_URL),
+                caption="👋🏻ʜᴇʟʟᴏ {message.from_user.mention()} ʏᴏᴜʀ ɴᴏᴛ sᴜʙsᴄʀɪʙᴇ ᴍʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇ ᴀɴᴅ ᴜsᴇ ᴍᴇ..🔥", 
+                reply_markup=InlineKeyboardMarkup( [[
+                 InlineKeyboardButton("🔰ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔰", url=f"t.me/{force_channel}") 
+                 ]]
+                ) 
+            )
+            return
     await message.reply_photo(
         photo=random.choice(START_IMG_URL),
         caption=f"""**
