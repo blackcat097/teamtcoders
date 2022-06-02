@@ -1,6 +1,5 @@
 from modules.database.dbqueue import remove_active_chat
 from modules.helpers.decorators import authorized_users_only, bot_creator, check_blacklist
-from modules.database.dbqueue import remove_active_chat
 from modules.database.dbchat import remove_served_chat
 
 @Client.on_message(
