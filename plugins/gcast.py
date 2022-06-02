@@ -22,7 +22,7 @@ async def bcast(_, message: Message):
             await wtf.edit("**__ᴘʟᴇᴀsᴇ ʀᴇᴘʟʏ ᴛᴏ sᴛᴀʀᴛ ʙʀᴏsᴅ ᴄᴀsᴛ...__**")
             return
         lmao = message.reply_to_message.text
-        async for dialog in aditya.iter_dialogs():
+        async for dialog in shadow.iter_dialogs():
             try:
                 await shadow.send_message(dialog.chat.id, lmao)
                 sent = sent+1
