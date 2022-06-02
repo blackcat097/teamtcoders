@@ -11,7 +11,7 @@ from pyrogram import Client, filters
 from modules.helpers.command import commandpro
 
 @Client.on_message(
-    command(["userbotjoin", f"userbotjoin@{BOT_USERNAME}"]) & other_filters
+    commandpro(["userbotjoin", f"userbotjoin@{BOT_USERNAME}"]) & other_filters
 )
 @check_blacklist()
 @authorized_users_only
