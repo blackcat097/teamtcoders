@@ -179,7 +179,7 @@ async def play(_, message: Message):
                     [
                         InlineKeyboardButton("• ᴍᴇɴᴜ", switch_inline_query_current_chat=""),
                         InlineKeyboardButton(
-                            "🗑 ʙɪɴ", callback_data="close"
+                            "🗑 ʙɪɴ", callback_data="set_close"
                         ),
                     ]
                 ]
@@ -218,7 +218,7 @@ async def play(_, message: Message):
                     [
                         InlineKeyboardButton("• ᴍᴇɴᴜ", switch_inline_query_current_chat=""),
                         InlineKeyboardButton(
-                            "🗑 ʙɪɴ", callback_data="close"
+                            "🗑 ʙɪɴ", callback_data="set_close"
                         ),
                     ]
                 ]
@@ -234,7 +234,7 @@ async def play(_, message: Message):
                     [
                         InlineKeyboardButton("• ᴍᴇɴᴜ", switch_inline_query_current_chat=""),
                         InlineKeyboardButton(
-                            "🗑 ʙɪɴ", callback_data="close"
+                            "🗑 ʙɪɴ", callback_data="set_close"
                         ),
                     ]
                 ]
@@ -284,15 +284,15 @@ async def play(_, message: Message):
             return
 
         keyboard = InlineKeyboardMarkup(
-            [
                 [
-                       InlineKeyboardButton(
-                           text="✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚",
-                           url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
-
+                    [
+                        InlineKeyboardButton("• ᴍᴇɴᴜ", switch_inline_query_current_chat=""),
+                        InlineKeyboardButton(
+                            "🗑 ʙɪɴ", callback_data="set_close"
+                        ),
+                    ]
                 ]
-            ]
-        )
+           )
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
