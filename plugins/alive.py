@@ -194,3 +194,14 @@ async def info(_, query: CallbackQuery):
             [[InlineKeyboardButton("◁", callback_data="home_start")]]
         ),
     ) 
+
+@Client.on_callback_query(filters.regex("set_close"))
+async def on_close_menu(_, query: CallbackQuery):
+    a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
+    if not a.can_manage_voice_chats:
+        return await query.answer("❗ ᴏɴʟʏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴍᴀɴᴀɢᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ ᴘᴇʀᴍɪssɪᴏɴ ᴛʜᴀᴛ ᴄᴀɴ ᴛᴀᴘ ᴛʜɪs ʙᴜᴛᴛᴏɴ !", show_alert=True)
+    await query.message.delete()
+
+@Client.on_callback_query(filters.regex("close_panel"))
+async def in_close_panel(_, query: CallbackQuery):
+    await query.message.delete()
