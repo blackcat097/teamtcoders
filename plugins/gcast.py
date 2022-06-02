@@ -1,3 +1,6 @@
+## ©copyright infringement on Team Shadow Projects
+## support: https://t.me/tgshadow_fighters
+## network: https://t.me/teamshadowprojects
 
 
 import asyncio
