@@ -201,7 +201,7 @@ async def commands_set(_, query: CallbackQuery):
             InlineKeyboardButton("•◁•", callback_data="home_start"), 
             ],[
             InlineKeyboardButton("•sᴜᴘᴘᴏʀᴛ•", url="https://t.me/tgshadow_fighters"), 
-            InlineKeyboardButton("🗑 ʙɪɴ", callback_data="set_close"), 
+            InlineKeyboardButton("🗑 ʙɪɴ", callback_data="close_panel"), 
             InlineKeyboardButton("•ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ•", url="https://t.me/teamshadowprojects")
             ]]
             ) 
