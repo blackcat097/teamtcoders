@@ -13,7 +13,7 @@ from os import path
 from asyncio.queues import QueueEmpty
 from typing import Callable
 from pyrogram import Client, filters
-from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors import UserAlreadyParticipant
 from modules.cache.admins import set
 from modules.clientbot import clientbot, queues
