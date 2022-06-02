@@ -321,7 +321,7 @@ async def play(_, message: Message):
                     ),
                 ),
                 stream_type=StreamType().local_stream,
-            )
+            )  
 
         await message.reply_photo(
             photo="final.png",
