@@ -1,4 +1,4 @@
-from modules.database.dbusers import Database
+from modules.database.dbusers import Database, total_users_count
 from pyrogram import Client, filters
 
 @Client.on_message(filters.private & filters.command("status"), group=5)
