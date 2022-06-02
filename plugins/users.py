@@ -1,7 +1,7 @@
 from modules.database.import dbusers
 
 
-@Bot.on_message(filters.private & filters.command("status"), group=5)
+@Client.on_message(filters.private & filters.command("status"), group=5)
 async def status(bot, update):
 
     total_users = await db.total_users_count()
