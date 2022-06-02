@@ -140,7 +140,7 @@ async def ping_pong(c: Client, message: Message):
     await m_reply.edit_text("💝 `ᴘᴏɴɢ!!`\n" f"💖 `{delta_ping * 1000:.3f} ms`")
 
 
-@Client.on_message(filters.command("id")) 
+@Client.on_message(command("id") & ~filters.edited) 
 async def id(c: Client, message: Message):
     text = """
 **ᴛʜɪs ɪs ʏᴏᴜʀ ᴄʜᴀᴛ ɪᴅ** : `{}`"""
