@@ -96,7 +96,7 @@ async def help(client: Client, message: Message):
     )
 
 
-@Client.on_message(command("ghelp") & filters.private & ~filters.edited)
+@Client.on_message(command("ghelp") & filters.group & ~filters.edited)
 async def gelp(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://te.legra.ph/file/02daf1a0d434a29f9d54c.jpg",
