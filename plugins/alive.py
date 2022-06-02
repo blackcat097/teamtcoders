@@ -142,7 +142,7 @@ async def ping_pong(c: Client, message: Message):
 
 @Client.on_message(command("id") & ~filters.edited) 
 async def id(c: Client, message: Message):
-    text = f"""
+    text = """
 **ᴛʜɪs ɪs ʏᴏᴜʀ ᴄʜᴀᴛ ɪᴅ** : `{}`"""
     await message.reply_text(
         text=text.format(
