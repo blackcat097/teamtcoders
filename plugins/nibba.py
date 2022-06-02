@@ -10,7 +10,7 @@ from modules.database.dbchat import remove_served_chat
 from pyrogram import Client, filters
 from modules.helpers.command import commandpro
 
-@Client.on_message(command(["userbotjoin", f"userbotjoin@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["userbotjoin", f"userbotjoin@{BOT_USERNAME}"])& filters.group & ~filters.edited)
 @check_blacklist()
 @authorized_users_only
 async def join_chat(c: Client, m: Message):
