@@ -1,10 +1,10 @@
-from modules.database import dbusers
+from modules.database.dbusers import Database
 from pyrogram import Client, filters
 
 @Client.on_message(filters.private & filters.command("status"), group=5)
 async def status(bot, update):
 
-    total_users = await bot.total_users_count()
+    total_users = await db.total_users_count()
     text = "**ʙᴏᴛ sᴛᴀᴛᴜs**\n"
     text += f"\n**ᴛᴏᴛᴀʟ ᴜsᴇʀs:** `{total_users}`"
 
