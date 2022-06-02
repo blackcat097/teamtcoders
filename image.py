@@ -11,7 +11,7 @@ MONGODB_URL = getenv("MONGODB_URL")
 
 ## BOT_IMAGE
 START_IMG_URL = [
- "https://te.legra.ph/file/bd8bc8134550113f1bc7d.jpg", 
+ "https://telegra.ph/file/a92703755fae0471ba9ec.jpg", 
  "https://te.legra.ph/file/e709c376815fcdb9e7689.jpg", 
  "https://te.legra.ph/file/ae5c5aaac8f73987255c3.jpg", 
  "https://te.legra.ph/file/9eef3af2b79fc94beb863.jpg", 
