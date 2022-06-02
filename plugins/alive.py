@@ -13,8 +13,10 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from image import START_IMG_URL, BOT_USERNAME, GROUP_SUPPORT, BOT_NAME
 import random
 from pyrogram.errors import UserNotParticipant
+from modulea.database.dbchat import add_served_chat, is_served_chat
+from modules.__main__ import ʙᴏᴛ
 
-from modules.__main__ import bot
+
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
 TIME_DURATION_UNITS = (
