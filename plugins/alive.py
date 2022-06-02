@@ -13,7 +13,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from image import START_IMG_URL, BOT_USERNAME, GROUP_SUPPORT, BOT_NAME
 import random
 from pyrogram.errors import UserNotParticipant
-from modulea.database.dbchat import add_served_chat, is_served_chat
+from modules.database.dbchat import add_served_chat, is_served_chat
 from modules.__main__ import ʙᴏᴛ
 
 
