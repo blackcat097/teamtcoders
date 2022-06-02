@@ -207,3 +207,51 @@ async def on_close_menu(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("close_panel"))
 async def in_close_panel(_, query: CallbackQuery):
     await query.message.delete()
+
+@Client.on_chat_join_request()
+async def approve_join_chat(c: Client, m: ChatJoinRequest):
+    if not m.from_user:
+        return
+    try:
+        await c.approve_chat_join_request(m.chat.id, m.from_user.id)
+    except FloodWait as e:
+        await asyncio.sleep(e.x + 2)
+        await c.approve_chat_join_request(m.chat.id, m.from_user.id)
+
+
+@Client.on_message(filters.new_chat_members)
+async def new_chat(c: Client, m: Message):
+    chat_id = m.chat.id
+    if await is_served_chat(chat_id):
+        pass
+    else:
+        await add_served_chat(chat_id)
+    ass_uname = me_user.username
+    bot_id = me_bot.id
+    for member in m.new_chat_members:
+        if chat_id in await blacklisted_chats():
+            await m.reply(
+                "❗️ ᴛʜɪs ᴄʜᴀᴛ ʜᴀs ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ʙʏ sᴜᴅᴏ ᴜsᴇʀ ᴀɴᴅ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ ɪɴ ᴛʜɪs ᴄʜᴀᴛ."
+            )
+            return await bot.leave_chat(chat_id)
+        if member.id == bot_id:
+            return await m.reply(
+                "❤️ ᴛʜᴀɴᴋs ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ᴛᴏ ᴛʜᴇ **ɢʀᴏᴜᴘ** !\n\n"
+                "ᴀᴘᴘᴏɪɴᴛ ᴍᴇ ᴀs ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀ ɪɴ ᴛʜᴇ **ɢʀᴏᴜᴘ**, ᴏᴛʜᴇʀᴡɪsᴇ ɪ ᴡɪʟʟ ɴᴏᴛ ʙᴇ ᴀʙʟᴇ ᴛᴏ ᴡᴏʀᴋ ᴘʀᴏᴘᴇʀʟʏ, ᴀɴᴅ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ᴛʏᴘᴇ /userbotjoin ᴛᴏ ɪɴᴠɪᴛᴇ ᴛʜᴇ ᴀssɪsᴛᴀɴᴛ ᴛᴏ ᴄʜᴀᴛ.\n\n"
+                "ᴏɴᴄᴇ ᴅᴏɴᴇ, ᴛʜᴇɴ ᴛʏᴘᴇ /reload",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("• ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴘʀᴏᴊᴇᴄᴛs", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                            InlineKeyboardButton("• sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}")
+                        ],
+                        [
+                            InlineKeyboardButton("🗑 ʙɪɴ", callback_data="set_close")
+                        ]
+                    ]
+                )
+            )
+
+
+chat_watcher_group = 10
+
