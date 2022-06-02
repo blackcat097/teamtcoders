@@ -27,7 +27,7 @@
             "required": true
         },
         "GROUP_SUPPORT": {
-            "description": "put your group support",
+            "description": "put your group support name without @",
             "required": true
         },
         "MONGODB_URL": {
@@ -37,6 +37,10 @@
         "OWNER_ID": {
             "description": "put your id",
             "required": true
+        },
+        "UPDATES_CHANNEL": {
+            "description": "put you channel name without @",
+            "required": true 
         }
     },
     "buildpacks": [
