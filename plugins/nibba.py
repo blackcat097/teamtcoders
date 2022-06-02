@@ -9,6 +9,7 @@ from modules.helpers.decorators import authorized_users_only, bot_creator, check
 from modules.database.dbchat import remove_served_chat
 from pyrogram import Client, filters
 from modules.helpers.command import commandpro
+from image import BOT_USERNAME
 
 @Client.on_message(command(["userbotjoin", f"userbotjoin@{BOT_USERNAME}"])& filters.group & ~filters.edited)
 @check_blacklist()
