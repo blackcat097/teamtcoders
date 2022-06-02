@@ -94,7 +94,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
     draw.text(
         (190, 670),
-        f"Powered By: ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ (@tgshadow_fighters)",
+        f"Powered By: Team Shadow (@tgshadow_fighters)",
         (255, 255, 255),
         font=font,
     )
@@ -175,15 +175,15 @@ async def play(_, message: Message):
         views = "Locally added"
 
         keyboard = InlineKeyboardMarkup(
-            [
                 [
+                    [
+                        InlineKeyboardButton("• ᴍᴇɴᴜ", switch_inline_query_current_chat=""),
                         InlineKeyboardButton(
-                            text="✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚",
-                            url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
-
+                            "🗑 ʙɪɴ", callback_data="close"
+                        ),
+                    ]
                 ]
-            ]
-        )
+           )
 
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)
@@ -214,15 +214,15 @@ async def play(_, message: Message):
                 secmul *= 60
 
             keyboard = InlineKeyboardMarkup(
-            [
                 [
+                    [
+                        InlineKeyboardButton("• ᴍᴇɴᴜ", switch_inline_query_current_chat=""),
                         InlineKeyboardButton(
-                            text="✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚",
-                            url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
-
+                            "🗑 ʙɪɴ", callback_data="close"
+                        ),
+                    ]
                 ]
-            ]
-        )
+           )
 
         except Exception as e:
             title = "NaN"
@@ -230,14 +230,15 @@ async def play(_, message: Message):
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
-            [
                 [
+                    [
+                        InlineKeyboardButton("• ᴍᴇɴᴜ", switch_inline_query_current_chat=""),
                         InlineKeyboardButton(
-                            text="✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚",
-                            url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                            "🗑 ʙɪɴ", callback_data="close"
+                        ),
+                    ]
                 ]
-            ]
-        )
+           )
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
