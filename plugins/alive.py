@@ -177,7 +177,7 @@ async def start_set(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("command_list"))
 async def commands_set(_, query: CallbackQuery):
-    await query.answer("command listlist") 
+    await query.answer("command list") 
     await query.edit_message_text(
         f"""💗 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 
 ➠ ʜᴇʟʟᴏ ɴᴀᴍsᴛʜᴇ ᴀɴɴᴀ ᴛʜɪs ɪs ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ ɢᴜɪᴅᴇ ᴡʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ ʏᴏᴜ ɴᴇᴅᴅ sᴇʟᴇᴄᴛ ʜᴇʀᴇ.. 
@@ -194,7 +194,7 @@ async def commands_set(_, query: CallbackQuery):
             InlineKeyboardButton("•sᴛᴏᴘ•", callback_data="stop_list"), 
             ],[
             InlineKeyboardButton("•ᴘʟᴀʏ•", callback_data="play_list"), 
-            InlineKeyboardButton("•ᴋɴᴏᴡ ʏᴏᴜʀ ᴄʜᴀᴛ ɪᴅ•", callback_id="id"), 
+            InlineKeyboardButton("•ᴋɴᴏᴡ ʏᴏᴜʀ ᴄʜᴀᴛ ɪᴅ•", callback_data="id"), 
             ],[
             InlineKeyboardButton("•sᴏᴜʀᴄᴇ•", callback_data="source"), 
             ],[
