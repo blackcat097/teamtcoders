@@ -15,6 +15,7 @@ import random
 from pyrogram.errors import UserNotParticipant
 from modules.database.dbchat import add_served_chat, is_served_chat
 from modules.__main__ import bot
+from modules import __version__
 
 
 START_TIME = datetime.utcnow()
