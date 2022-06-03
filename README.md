@@ -23,17 +23,15 @@
 <h4>ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴅᴇᴘʟᴏʏ ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴍᴜsɪᴄ ᴏɴ ᴏᴋᴛᴇᴛᴏ!</h4>
 <a href="https://cloud.okteto.com/deploy?repository=https://github.com/santhumusic/TeamShadow"><img src="https://img.shields.io/badge/Deploy%20To%20Okteto-informational?style=for-the-badge&logo=Okteto" width="200""/></a>
 
-
-````
 ## instructions to deploy
 ---------------------------------------
-DON'T CHANGE ANY VALUES IN REPO DON'T EDIT KANGERS IF YOU EDIT THIS REPO BOT WILL CRASH YOUR TELEGRAM ACCOUNT & BAN ALL IN YOUR GROUPS AND HEROKU WILL BAN YOUR ACCOUNT DON'T EDIT ANY VALUES IN THE REPO JUST FORK AND DEPLOY
+````DON'T CHANGE ANY VALUES IN REPO DON'T EDIT KANGERS IF YOU EDIT THIS REPO BOT WILL CRASH YOUR TELEGRAM ACCOUNT & BAN ALL IN YOUR GROUPS AND HEROKU WILL BAN YOUR ACCOUNT DON'T EDIT ANY VALUES IN THE REPO JUST FORK AND DEPLOY````
 ----------------------------------------
-````                                            MADE BY : [TEAM SHADOW MUSIC BOT](https://t.me/Team_shadowmusic_bot) 
+                                  MADE BY : [TEAM SHADOW MUSIC BOT](https://t.me/Team_shadowmusic_bot) 
 
 
 
-
+###### CREDITS
 --------------;;---------;:--;;+++++++-
 CREDITS GOSE'S TO TEAM SHADOW NETWORK  '
 _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_'-
