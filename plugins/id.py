@@ -3,13 +3,14 @@
 ## network: https://t.me/teamshadowprojects
 
 
-
+from modules.helpers.decorators import sudo_users_only
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 from modules.helpers.filters import command
 from modules.helpers.command import commandpro
 
 @Client.on_message(command("id") & ~filters.edited) 
+@sudo_users_only
 async def id(c: Client, message: Message):
     text = """
 **ᴛʜɪs ɪs ʏᴏᴜʀ ᴄʜᴀᴛ ɪᴅ** : `{}`"""
@@ -21,6 +22,7 @@ async def id(c: Client, message: Message):
 
 
 @Client.on_callback_query(filters.regex("id"))
+@sudo_users_only
 async def id(_, query: CallbackQuery):
     await query.answer("chat id")
     await query.edit_message_text(
