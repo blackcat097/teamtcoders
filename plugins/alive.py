@@ -17,6 +17,7 @@ from modules.database.dbchat import add_served_chat, is_served_chat
 from modules.__main__ import bot
 from modules import __version__
 from pytgcalls import (__version__ as pytover)
+from sys import version_info
 
 __major__ = 0
 __minor__ = 2
