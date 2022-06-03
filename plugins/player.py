@@ -33,7 +33,7 @@ from PIL import Image, ImageFont, ImageDraw
 from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputStream
 from pytgcalls.types.input_stream import InputAudioStream
-from image import BOT_USERNAME
+from image import BOT_USERNAME, GROUP_SUPPORT
 
 # plus
 chat_id = None
@@ -327,7 +327,8 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="**ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴍᴜsɪᴄ ɴᴏᴡ ᴘʟᴀʏɪɴɢ.😍 ᴏƤ 🥀 ...**".format(),
+            caption="**ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴍᴜsɪᴄ ɴᴏᴡ ᴘʟᴀʏɪɴɢ.😍 ᴏƤ 🥀 ...\n**
+**ʀᴇǫᴜᴇsᴛ ʙʏ: {requester}**\nᴘᴏᴡᴇʀᴇᴅ ʙʏ: [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/{GROUP_SUPPORT})".format(),
            )
 
     os.remove("final.png")
@@ -406,7 +407,7 @@ async def stop(_, message: Message):
     )
 
 
-@Client.on_message(commandpro(["reload", "refresh"]))
+@Client.on_message(commandpro(["/reload", "/refresh"]))
 @errors
 @authorized_users_only
 async def admincache(client, message: Message):
