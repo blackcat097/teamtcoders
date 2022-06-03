@@ -11,6 +11,9 @@ from pyrogram import Client, filters
 from modules.helpers.command import commandpro
 from image import BOT_USERNAME
 from pyrogram.types import Message
+from modules.database.dbchat import get_served_chats
+from modules.database.dbusers import get_served_users
+
 
 @Client.on_message(commandpro(["userbotjoin", f"userbotjoin@{BOT_USERNAME}"])& filters.group & ~filters.edited)
 @check_blacklist()
