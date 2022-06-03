@@ -310,7 +310,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption=f"**ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴀᴅᴅᴇᴅ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ.`{}` ❣️...**.format(position)\n🚩**ʀᴇǫᴜᴇsᴛ ʙʏ: {message.from_user.mention()}**\n💓 **ᴘᴏᴡᴇʀᴇᴅ ʙʏ: [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/{GROUP_SUPPORT})", 
+            caption="**ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴀᴅᴅᴇᴅ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ.`{}` ❣️...**.format(position)\n🚩**ʀᴇǫᴜᴇsᴛ ʙʏ: {message.from_user.mention()}**\n💓 **ᴘᴏᴡᴇʀᴇᴅ ʙʏ: [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/{GROUP_SUPPORT})", 
             reply_markup=keyboard,
         )
     else:
