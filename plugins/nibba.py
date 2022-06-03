@@ -40,7 +40,8 @@ async def join_chat(c: Client, m: Message):
 
 
 @Client.on_message(commandpro(["stats", f"stats@{uname}"]) & ~filters.edited)
-@sudo_users_only
+@check_blacklist()
+@authorized_users_only
 async def bot_statistic(c: Client, message: Message):
     name = me_bot.first_name
     chat_id = message.chat.id
