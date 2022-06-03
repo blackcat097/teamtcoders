@@ -5,7 +5,7 @@
 
 
 from modules.database.dbqueue import remove_active_chat
-from modules.helpers.decorators import authorized_users_only, bot_creator, check_blacklist, sudo_users_only
+from modules.helpers.decorators import authorized_users_only, bot_creator, check_blacklist
 from modules.database.dbchat import remove_served_chat
 from pyrogram import Client, filters
 from modules.helpers.command import commandpro
@@ -16,6 +16,7 @@ from modules.database.dbusers import get_served_users
 from pytgcalls import (__version__ as pytgver)
 from modules import __version__ as ver
 from image import BOT_USERNAME as uname
+from modules.helpers.decorators import sudo_users_only
 
 @Client.on_message(commandpro(["userbotjoin", f"userbotjoin@{BOT_USERNAME}"])& filters.group & ~filters.edited)
 @check_blacklist()
