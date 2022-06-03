@@ -37,7 +37,7 @@ async def join_chat(c: Client, m: Message):
         return await user.send_message(chat_id, "✅ ᴜsᴇʀʙᴏᴛ ᴀʟʀᴇᴀᴅʏ ɪɴ ᴄʜᴀᴛ")
 
 
-@Client.on_message(command(["stats", f"stats@{uname}"]) & ~filters.edited)
+@Client.on_message(commandpro(["stats", f"stats@{uname}"]) & ~filters.edited)
 @sudo_users_only
 async def bot_statistic(c: Client, message: Message):
     name = me_bot.first_name
