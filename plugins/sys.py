@@ -9,6 +9,8 @@ from image import BOT_USERNAME
 from modules.helpers.filters import filters 
 from pyrogram import Client, filters
 from modules.helpers.decorators import sudo_users_only, humanbytes
+from modules.helpers.filters import command
+from modules.helpers.command import commandpro
 
 
 # FETCH SYSINFO
