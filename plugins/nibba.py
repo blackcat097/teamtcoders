@@ -15,6 +15,7 @@ from modules.database.dbchat import get_served_chats
 from modules.database.dbusers import get_served_users
 from pytgcalls import (__version__ as pytgver)
 from modules import __version__ as ver
+from image import BOT_USERNAME as uname
 
 @Client.on_message(commandpro(["userbotjoin", f"userbotjoin@{BOT_USERNAME}"])& filters.group & ~filters.edited)
 @check_blacklist()
