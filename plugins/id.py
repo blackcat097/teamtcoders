@@ -1,10 +1,12 @@
+
+
+
+
+
+
+
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
-
-
-
-
-
 
 @Client.on_message(command("id") & ~filters.edited) 
 async def id(c: Client, message: Message):
