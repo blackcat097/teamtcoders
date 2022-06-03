@@ -6,7 +6,7 @@ import socket
 import psutil
 import platform
 from image import BOT_USERNAME
-from modules.helpers.filters import filters import command
+from modules.helpers.filters import filters 
 from pyrogram import Client, filters
 from modules.helpers.decorators import sudo_users_only, humanbytes
 
