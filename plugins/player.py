@@ -310,7 +310,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption="**ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴀᴅᴅᴇᴅ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ.`{}` ❣️...**".format(position),
+            caption="**ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴀᴅᴅᴇᴅ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ.`{}` ❣️...**\n🚩**ʀᴇǫᴜᴇsᴛ ʙʏ: {message.from_user.mention()}**\n💓 **ᴘᴏᴡᴇʀᴇᴅ ʙʏ: [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/{GROUP_SUPPORT})".format(position),
             reply_markup=keyboard,
         )
     else:
@@ -327,7 +327,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"**ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴍᴜsɪᴄ ɴᴏᴡ ᴘʟᴀʏɪɴɢ.😍 ᴏƤ 🥀 ...\n** **ʀᴇǫᴜᴇsᴛ ʙʏ: {message.from_user.mention()}**\nᴘᴏᴡᴇʀᴇᴅ ʙʏ: [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/{GROUP_SUPPORT})".format(),
+            caption=f"**ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴍᴜsɪᴄ ɴᴏᴡ ᴘʟᴀʏɪɴɢ.😍 ᴏƤ 🥀** ...\n🚩**ʀᴇǫᴜᴇsᴛ ʙʏ: {message.from_user.mention()}**\n💓 **ᴘᴏᴡᴇʀᴇᴅ ʙʏ**: [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/{GROUP_SUPPORT})".format(),
            )
 
     os.remove("final.png")
