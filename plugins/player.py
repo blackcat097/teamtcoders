@@ -327,8 +327,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"**ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴍᴜsɪᴄ ɴᴏᴡ ᴘʟᴀʏɪɴɢ.😍 ᴏƤ 🥀 ...\n**
-**ʀᴇǫᴜᴇsᴛ ʙʏ: {requester}**\nᴘᴏᴡᴇʀᴇᴅ ʙʏ: [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/{GROUP_SUPPORT})".format(),
+            caption=f"**ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴍᴜsɪᴄ ɴᴏᴡ ᴘʟᴀʏɪɴɢ.😍 ᴏƤ 🥀 ...\n** **ʀᴇǫᴜᴇsᴛ ʙʏ: {requester}**\nᴘᴏᴡᴇʀᴇᴅ ʙʏ: [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/{GROUP_SUPPORT})".format(),
            )
 
     os.remove("final.png")
