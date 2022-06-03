@@ -16,6 +16,13 @@ from pyrogram.errors import UserNotParticipant
 from modules.database.dbchat import add_served_chat, is_served_chat
 from modules.__main__ import bot
 from modules import __version__
+from pytgcalls import (__version__ as pytover)
+
+__major__ = 0
+__minor__ = 2
+__micro__ = 1
+
+__python_version__ = f"{version_info[0]}.{version_info[1]}.{version_info[2]}"
 
 
 START_TIME = datetime.utcnow()
