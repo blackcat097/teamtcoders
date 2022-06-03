@@ -31,8 +31,12 @@ DON'T CHANGE ANY VALUES IN REPO DON'T EDIT KANGERS IF YOU EDIT THIS REPO BOT WIL
 ----------------------------------------
 ````                                            MADE BY : [TEAM SHADOW MUSIC BOT](https://t.me/Team_shadowmusic_bot) 
 
-CREDITS GOSE'S TO TEAM SHADOW NETWORK
-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+
+
+--------------;;---------;:--;;+++++++-
+CREDITS GOSE'S TO TEAM SHADOW NETWORK  '
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_'-
 
 [• KANNA](https://t.me/TgShadow_fighter) 
 
