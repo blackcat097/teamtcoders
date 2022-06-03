@@ -31,3 +31,29 @@ async def join_chat(c: Client, m: Message):
         return await user.send_message(chat_id, "✅ ᴜsᴇʀʙᴏᴛ ᴊᴏɪɴᴇᴅ ᴄʜᴀᴛ")
     except UserAlreadyParticipant:
         return await user.send_message(chat_id, "✅ ᴜsᴇʀʙᴏᴛ ᴀʟʀᴇᴀᴅʏ ɪɴ ᴄʜᴀᴛ")
+
+
+@Client.on_message(command(["stats", f"stats@{uname}"]) & ~filters.edited)
+@sudo_users_only
+async def bot_statistic(c: Client, message: Message):
+    name = me_bot.first_name
+    chat_id = message.chat.id
+    user_id = message.from_user.id
+    msg = await c.send_message(
+        chat_id, "❖ **ᴄᴏʟʟᴇᴄᴛɪɴɢ sᴛᴀᴛs...**"
+    )
+    served_chats = len(await get_served_chats())
+    served_users = len(await get_served_users())
+    gbans_usertl = await get_gbans_count()
+    tgm = f"""
+💝 **ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛɪsᴛɪᴄs ᴏғ ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ʙᴏᴛ** [{name}](https://t.me/{uname})`:`
+➥ **ɢʀᴏᴜᴘs ᴄʜᴀᴛ** : `{served_chats}`
+➥ **ᴜsᴇʀs ᴅɪᴀʟᴏɢ** : `{served_users}`
+➥ **ɢʙᴀɴɴᴇᴅ ᴜsᴇʀs** : `{gbans_usertl}`
+➛ **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `{pyver}`
+➛ **ᴘʏᴛɢᴄᴀʟʟs ᴠᴇʀsɪᴏɴ** : `{pytgver.__version__}`
+➛ **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ** : `{pyrover}`
+➛ **ʙᴏᴛ ᴠᴇʀsɪᴏɴ** : `{ver}`"""
+    
+    await msg.edit(tgm, disable_web_page_preview=True)
+
